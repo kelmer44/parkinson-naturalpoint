@@ -1,0 +1,924 @@
+﻿// Created by Microsoft (R) C/C++ Compiler Version 15.00.30729.01 (866aa974).
+//
+// c:\program files\naturalpoint\optitrack\samples\#### cam control ir-alz exp1\release\optitrack.tlh
+//
+// C++ source equivalent of Win32 type library optitrack.tlb
+// compiler-generated file created 03/03/11 at 13:40:29 - DO NOT EDIT!
+
+#pragma once
+#pragma pack(push, 8)
+
+#include <comdef.h>
+
+namespace OptiTrack {
+
+//
+// Forward references and typedefs
+//
+
+struct __declspec(uuid("2627555c-ca32-4d0d-aa55-d04783a5497e"))
+/* LIBID */ __OptiTrack;
+struct __declspec(uuid("076f9dda-1422-4b4d-926a-961df5725b5a"))
+/* dispinterface */ _INPCameraCollectionEvents;
+struct __declspec(uuid("ade1e272-c86a-460d-b7b9-3051f310e4d0"))
+/* dual interface */ INPCamera;
+struct __declspec(uuid("73cf9a64-837a-4f05-9bf6-8a253ce16e46"))
+/* dual interface */ INPCameraFrame;
+struct __declspec(uuid("6e439ce4-ab0d-44b8-bf1e-644c5cc489dc"))
+/* dual interface */ INPObject;
+struct __declspec(uuid("a50b57c5-7472-4f16-bc14-2345b8d24bfd"))
+/* dispinterface */ _INPCameraEvents;
+struct /* coclass */ NPCameraCollection;
+struct __declspec(uuid("28e501bb-fdd9-46cf-a112-741587110f0e"))
+/* dual interface */ INPCameraCollection;
+struct /* coclass */ NPCamera;
+struct /* coclass */ NPCameraFrame;
+struct /* coclass */ NPObject;
+struct /* coclass */ NPSmoothing;
+struct __declspec(uuid("0edd3505-855c-4d91-a9c1-dcbec1b816fa"))
+/* dual interface */ INPSmoothing;
+struct /* coclass */ NPVector;
+struct __declspec(uuid("9124c9aa-9296-4e89-973d-4f3c502e36ca"))
+/* dual interface */ INPVector3;
+struct __declspec(uuid("9124c9f0-9296-4e89-973d-4f3c502e36ca"))
+/* dual interface */ INPPoint;
+struct __declspec(uuid("9124c9a9-9296-4e89-973d-4f3c502e36ca"))
+/* dual interface */ INPVector2;
+struct __declspec(uuid("9124c9a8-9296-4e89-973d-4f3c502e36ca"))
+/* dual interface */ INPVector;
+struct /* coclass */ NPPoint;
+struct /* coclass */ NPAvi;
+struct __declspec(uuid("9124ca00-9296-4e89-973d-4f3c502e36ca"))
+/* dual interface */ INPAvi;
+
+//
+// Smart pointer typedef declarations
+//
+
+_COM_SMARTPTR_TYPEDEF(_INPCameraCollectionEvents, __uuidof(_INPCameraCollectionEvents));
+_COM_SMARTPTR_TYPEDEF(_INPCameraEvents, __uuidof(_INPCameraEvents));
+_COM_SMARTPTR_TYPEDEF(INPSmoothing, __uuidof(INPSmoothing));
+_COM_SMARTPTR_TYPEDEF(INPPoint, __uuidof(INPPoint));
+_COM_SMARTPTR_TYPEDEF(INPCamera, __uuidof(INPCamera));
+_COM_SMARTPTR_TYPEDEF(INPObject, __uuidof(INPObject));
+_COM_SMARTPTR_TYPEDEF(INPCameraFrame, __uuidof(INPCameraFrame));
+_COM_SMARTPTR_TYPEDEF(INPCameraCollection, __uuidof(INPCameraCollection));
+_COM_SMARTPTR_TYPEDEF(INPVector3, __uuidof(INPVector3));
+_COM_SMARTPTR_TYPEDEF(INPVector2, __uuidof(INPVector2));
+_COM_SMARTPTR_TYPEDEF(INPVector, __uuidof(INPVector));
+_COM_SMARTPTR_TYPEDEF(INPAvi, __uuidof(INPAvi));
+
+//
+// Type library items
+//
+
+struct __declspec(uuid("076f9dda-1422-4b4d-926a-961df5725b5a"))
+_INPCameraCollectionEvents : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    // Methods:
+    HRESULT DeviceRemoval (
+        struct INPCamera * pCamera );
+    HRESULT DeviceArrival (
+        struct INPCamera * pCamera );
+    HRESULT FrameAvailableId (
+        long Group,
+        long Id );
+};
+
+struct __declspec(uuid("a50b57c5-7472-4f16-bc14-2345b8d24bfd"))
+_INPCameraEvents : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    // Methods:
+    HRESULT FrameAvailable (
+        struct INPCamera * pCamera );
+    HRESULT SwitchChange (
+        struct INPCamera * pCamera,
+        long lNewSwitchState );
+    HRESULT FrameAvailableIdCamera (
+        struct INPCamera * pCamera,
+        long Group,
+        long Id );
+};
+
+struct __declspec(uuid("1ca83c6f-70a6-40eb-836f-d9eec0bd168f"))
+NPCameraCollection;
+    // [ default ] interface INPCameraCollection
+    // [ default, source ] dispinterface _INPCameraCollectionEvents
+
+struct __declspec(uuid("77686c4c-8402-42ce-adf2-913b53e0a25b"))
+NPCamera;
+    // [ default ] interface INPCamera
+    // [ default, source ] dispinterface _INPCameraEvents
+
+struct __declspec(uuid("4656500b-863b-48f6-8725-ab029769ea89"))
+NPCameraFrame;
+    // [ default ] interface INPCameraFrame
+
+struct __declspec(uuid("b696b174-5b53-4ddd-b78b-ca75c072c85a"))
+NPObject;
+    // [ default ] interface INPObject
+
+struct __declspec(uuid("b4ca710d-9b17-42c3-846b-fc16876b6d5e"))
+NPSmoothing;
+    // [ default ] interface INPSmoothing
+
+struct __declspec(uuid("0edd3505-855c-4d91-a9c1-dcbec1b816fa"))
+INPSmoothing : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetAmount,put=PutAmount))
+    _variant_t Amount;
+    __declspec(property(get=GetX))
+    _variant_t X;
+    __declspec(property(get=GetY))
+    _variant_t Y;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    _variant_t GetAmount ( );
+    void PutAmount (
+        const _variant_t & pVal );
+    _variant_t GetX ( );
+    _variant_t GetY ( );
+    HRESULT Update (
+        const _variant_t & ValX,
+        const _variant_t & ValY );
+    HRESULT Reset ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_Amount (
+        /*[out,retval]*/ VARIANT * pVal ) = 0;
+      virtual HRESULT __stdcall put_Amount (
+        /*[in]*/ VARIANT pVal ) = 0;
+      virtual HRESULT __stdcall get_X (
+        /*[out,retval]*/ VARIANT * pVal ) = 0;
+      virtual HRESULT __stdcall get_Y (
+        /*[out,retval]*/ VARIANT * pVal ) = 0;
+      virtual HRESULT __stdcall raw_Update (
+        /*[in]*/ VARIANT ValX,
+        VARIANT ValY ) = 0;
+      virtual HRESULT __stdcall raw_Reset ( ) = 0;
+};
+
+struct __declspec(uuid("fe7d5fb0-0560-49ed-bf49-ce9996c62a6b"))
+NPVector;
+    // [ default ] interface INPVector3
+    // interface INPVector2
+    // interface INPVector
+
+struct __declspec(uuid("9124c9f0-9296-4e89-973d-4f3c502e36ca"))
+INPPoint : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetX))
+    _variant_t X;
+    __declspec(property(get=GetY))
+    _variant_t Y;
+    __declspec(property(get=GetZ))
+    _variant_t Z;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    _variant_t GetX ( );
+    _variant_t GetY ( );
+    _variant_t GetZ ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_X (
+        /*[out,retval]*/ VARIANT * pVal ) = 0;
+      virtual HRESULT __stdcall get_Y (
+        /*[out,retval]*/ VARIANT * pVal ) = 0;
+      virtual HRESULT __stdcall get_Z (
+        /*[out,retval]*/ VARIANT * pVal ) = 0;
+};
+
+struct __declspec(uuid("fe7d5fb2-0560-49ed-bf49-ce9996c62a6b"))
+NPPoint;
+    // [ default ] interface INPPoint
+
+struct __declspec(uuid("fe7d5fb3-0560-49ed-bf49-ce9996c62a6b"))
+NPAvi;
+    // [ default ] interface INPAvi
+
+struct __declspec(uuid("ade1e272-c86a-460d-b7b9-3051f310e4d0"))
+INPCamera : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetSerialNumber))
+    long SerialNumber;
+    __declspec(property(get=GetModel))
+    long Model;
+    __declspec(property(get=GetRevision))
+    long Revision;
+    __declspec(property(get=GetWidth))
+    long Width;
+    __declspec(property(get=GetHeight))
+    long Height;
+    __declspec(property(get=GetFrameRate))
+    long FrameRate;
+    __declspec(property(get=GetBlockingMaskWidth))
+    long BlockingMaskWidth;
+    __declspec(property(get=GetBlockingMaskHeight))
+    long BlockingMaskHeight;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    long GetSerialNumber ( );
+    long GetModel ( );
+    long GetRevision ( );
+    long GetWidth ( );
+    long GetHeight ( );
+    long GetFrameRate ( );
+    long GetBlockingMaskWidth ( );
+    long GetBlockingMaskHeight ( );
+    HRESULT Start ( );
+    HRESULT Stop ( );
+    HRESULT Open ( );
+    HRESULT Close ( );
+    HRESULT SetLED (
+        long lLED,
+        VARIANT_BOOL fOn );
+    INPCameraFramePtr GetFrame (
+        long lTimeout );
+    HRESULT DrawFrame (
+        struct INPCameraFrame * pFrame,
+        long hwnd );
+    HRESULT ResetTrackedObject ( );
+    _variant_t GetOption (
+        long lOption );
+    HRESULT SetOption (
+        long lOption,
+        const _variant_t & Val );
+    INPCameraFramePtr GetFrameById (
+        long Id );
+    HRESULT GetFrameImage (
+        struct INPCameraFrame * pFrame,
+        int PixelWidth,
+        int PixelHeight,
+        int ByteSpan,
+        int BitsPerPixel,
+        unsigned char * Buffer );
+    HRESULT SetVideo (
+        VARIANT_BOOL fOn );
+    HRESULT ClearBlockingMask ( );
+    HRESULT EnableBlockingMask ( );
+    HRESULT DisableBlockingMask ( );
+    HRESULT AddBlockingRectangle (
+        long X1,
+        long Y1,
+        long X2,
+        long Y2 );
+    HRESULT RemoveBlockingRectangle (
+        long X1,
+        long Y1,
+        long X2,
+        long Y2 );
+    HRESULT GetBlockingMask (
+        unsigned char * Buffer,
+        long BufferSize );
+    HRESULT SetBlockingMask (
+        unsigned char * Buffer,
+        long BufferSize );
+    HRESULT UpdateBlockingMask ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_SerialNumber (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall get_Model (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall get_Revision (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall get_Width (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall get_Height (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall get_FrameRate (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall get_BlockingMaskWidth (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall get_BlockingMaskHeight (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall raw_Start ( ) = 0;
+      virtual HRESULT __stdcall raw_Stop ( ) = 0;
+      virtual HRESULT __stdcall raw_Open ( ) = 0;
+      virtual HRESULT __stdcall raw_Close ( ) = 0;
+      virtual HRESULT __stdcall raw_SetLED (
+        /*[in]*/ long lLED,
+        /*[in]*/ VARIANT_BOOL fOn ) = 0;
+      virtual HRESULT __stdcall raw_GetFrame (
+        /*[in]*/ long lTimeout,
+        /*[out,retval]*/ struct INPCameraFrame * * ppFrame ) = 0;
+      virtual HRESULT __stdcall raw_DrawFrame (
+        /*[in]*/ struct INPCameraFrame * pFrame,
+        /*[in]*/ long hwnd ) = 0;
+      virtual HRESULT __stdcall raw_ResetTrackedObject ( ) = 0;
+      virtual HRESULT __stdcall raw_GetOption (
+        /*[in]*/ long lOption,
+        /*[out,retval]*/ VARIANT * pVal ) = 0;
+      virtual HRESULT __stdcall raw_SetOption (
+        /*[in]*/ long lOption,
+        /*[in]*/ VARIANT Val ) = 0;
+      virtual HRESULT __stdcall raw_GetFrameById (
+        /*[in]*/ long Id,
+        /*[out,retval]*/ struct INPCameraFrame * * ppFrame ) = 0;
+      virtual HRESULT __stdcall raw_GetFrameImage (
+        /*[in]*/ struct INPCameraFrame * pFrame,
+        /*[in]*/ int PixelWidth,
+        /*[in]*/ int PixelHeight,
+        /*[in]*/ int ByteSpan,
+        /*[in]*/ int BitsPerPixel,
+        /*[in]*/ unsigned char * Buffer ) = 0;
+      virtual HRESULT __stdcall raw_SetVideo (
+        /*[in]*/ VARIANT_BOOL fOn ) = 0;
+      virtual HRESULT __stdcall raw_ClearBlockingMask ( ) = 0;
+      virtual HRESULT __stdcall raw_EnableBlockingMask ( ) = 0;
+      virtual HRESULT __stdcall raw_DisableBlockingMask ( ) = 0;
+      virtual HRESULT __stdcall raw_AddBlockingRectangle (
+        /*[in]*/ long X1,
+        /*[in]*/ long Y1,
+        /*[in]*/ long X2,
+        /*[in]*/ long Y2 ) = 0;
+      virtual HRESULT __stdcall raw_RemoveBlockingRectangle (
+        /*[in]*/ long X1,
+        /*[in]*/ long Y1,
+        /*[in]*/ long X2,
+        /*[in]*/ long Y2 ) = 0;
+      virtual HRESULT __stdcall raw_GetBlockingMask (
+        /*[in]*/ unsigned char * Buffer,
+        /*[in]*/ long BufferSize ) = 0;
+      virtual HRESULT __stdcall raw_SetBlockingMask (
+        /*[in]*/ unsigned char * Buffer,
+        /*[in]*/ long BufferSize ) = 0;
+      virtual HRESULT __stdcall raw_UpdateBlockingMask ( ) = 0;
+};
+
+struct __declspec(uuid("6e439ce4-ab0d-44b8-bf1e-644c5cc489dc"))
+INPObject : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetArea))
+    _variant_t Area;
+    __declspec(property(get=GetX))
+    _variant_t X;
+    __declspec(property(get=GetY))
+    _variant_t Y;
+    __declspec(property(get=GetScore))
+    _variant_t Score;
+    __declspec(property(get=GetRank))
+    long Rank;
+    __declspec(property(get=GetWidth))
+    long Width;
+    __declspec(property(get=GetHeight))
+    long Height;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    _variant_t GetArea ( );
+    _variant_t GetX ( );
+    _variant_t GetY ( );
+    _variant_t GetScore ( );
+    long GetRank ( );
+    long GetWidth ( );
+    long GetHeight ( );
+    HRESULT Transform (
+        struct INPCamera * pCamera );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_Area (
+        /*[out,retval]*/ VARIANT * pVal ) = 0;
+      virtual HRESULT __stdcall get_X (
+        /*[out,retval]*/ VARIANT * pVal ) = 0;
+      virtual HRESULT __stdcall get_Y (
+        /*[out,retval]*/ VARIANT * pVal ) = 0;
+      virtual HRESULT __stdcall get_Score (
+        /*[out,retval]*/ VARIANT * pVal ) = 0;
+      virtual HRESULT __stdcall get_Rank (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall get_Width (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall get_Height (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall raw_Transform (
+        /*[in]*/ struct INPCamera * pCamera ) = 0;
+};
+
+struct __declspec(uuid("73cf9a64-837a-4f05-9bf6-8a253ce16e46"))
+INPCameraFrame : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetCount))
+    long Count;
+    __declspec(property(get=GetId))
+    long Id;
+    __declspec(property(get=GetSwitchState))
+    long SwitchState;
+    __declspec(property(get=GetIsEmpty))
+    VARIANT_BOOL IsEmpty;
+    __declspec(property(get=GetIsCorrupt))
+    VARIANT_BOOL IsCorrupt;
+    __declspec(property(get=GetIsGreyscale))
+    VARIANT_BOOL IsGreyscale;
+    __declspec(property(get=GetTimeStamp))
+    _variant_t TimeStamp;
+    __declspec(property(get=GetTimeStampFrequency))
+    _variant_t TimeStampFrequency;
+    __declspec(property(get=Get_NewEnum))
+    IUnknownPtr _NewEnum;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    IUnknownPtr Get_NewEnum ( );
+    long GetCount ( );
+    INPObjectPtr Item (
+        long a_vlIndex );
+    long GetId ( );
+    long GetSwitchState ( );
+    VARIANT_BOOL GetIsEmpty ( );
+    VARIANT_BOOL GetIsCorrupt ( );
+    VARIANT_BOOL GetIsGreyscale ( );
+    _variant_t GetTimeStamp ( );
+    _variant_t GetTimeStampFrequency ( );
+    long GetObjectData (
+        unsigned char * Buffer,
+        int BufferSize );
+    HRESULT Free ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get__NewEnum (
+        /*[out,retval]*/ IUnknown * * ppunk ) = 0;
+      virtual HRESULT __stdcall get_Count (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall raw_Item (
+        /*[in]*/ long a_vlIndex,
+        /*[out,retval]*/ struct INPObject * * ppObject ) = 0;
+      virtual HRESULT __stdcall get_Id (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall get_SwitchState (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall get_IsEmpty (
+        /*[out,retval]*/ VARIANT_BOOL * pVal ) = 0;
+      virtual HRESULT __stdcall get_IsCorrupt (
+        /*[out,retval]*/ VARIANT_BOOL * pVal ) = 0;
+      virtual HRESULT __stdcall get_IsGreyscale (
+        /*[out,retval]*/ VARIANT_BOOL * pVal ) = 0;
+      virtual HRESULT __stdcall get_TimeStamp (
+        /*[out,retval]*/ VARIANT * pVal ) = 0;
+      virtual HRESULT __stdcall get_TimeStampFrequency (
+        /*[out,retval]*/ VARIANT * pVal ) = 0;
+      virtual HRESULT __stdcall raw_GetObjectData (
+        /*[in]*/ unsigned char * Buffer,
+        /*[in]*/ int BufferSize,
+        /*[out,retval]*/ long * pObjectCount ) = 0;
+      virtual HRESULT __stdcall raw_Free ( ) = 0;
+};
+
+struct __declspec(uuid("28e501bb-fdd9-46cf-a112-741587110f0e"))
+INPCameraCollection : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetCount))
+    long Count;
+    __declspec(property(get=Get_NewEnum))
+    IUnknownPtr _NewEnum;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    IUnknownPtr Get_NewEnum ( );
+    long GetCount ( );
+    INPCameraPtr Item (
+        long a_vlIndex );
+    HRESULT Enum ( );
+    HRESULT Synchronize ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get__NewEnum (
+        /*[out,retval]*/ IUnknown * * ppunk ) = 0;
+      virtual HRESULT __stdcall get_Count (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall raw_Item (
+        /*[in]*/ long a_vlIndex,
+        /*[out,retval]*/ struct INPCamera * * ppCamera ) = 0;
+      virtual HRESULT __stdcall raw_Enum ( ) = 0;
+      virtual HRESULT __stdcall raw_Synchronize ( ) = 0;
+};
+
+struct __declspec(uuid("9124c9aa-9296-4e89-973d-4f3c502e36ca"))
+INPVector3 : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetYaw))
+    _variant_t Yaw;
+    __declspec(property(get=GetPitch))
+    _variant_t Pitch;
+    __declspec(property(get=GetRoll))
+    _variant_t Roll;
+    __declspec(property(get=GetX))
+    _variant_t X;
+    __declspec(property(get=GetY))
+    _variant_t Y;
+    __declspec(property(get=GetZ))
+    _variant_t Z;
+    __declspec(property(get=Getdist01,put=Putdist01))
+    _variant_t dist01;
+    __declspec(property(get=Getdist02,put=Putdist02))
+    _variant_t dist02;
+    __declspec(property(get=Getdist12,put=Putdist12))
+    _variant_t dist12;
+    __declspec(property(get=Getdistol,put=Putdistol))
+    _variant_t distol;
+    __declspec(property(get=GetTracking))
+    _variant_t Tracking;
+    __declspec(property(get=GetimagerPixelWidth,put=PutimagerPixelWidth))
+    _variant_t imagerPixelWidth;
+    __declspec(property(get=GetimagerPixelHeight,put=PutimagerPixelHeight))
+    _variant_t imagerPixelHeight;
+    __declspec(property(get=GetimagerMMWidth,put=PutimagerMMWidth))
+    _variant_t imagerMMWidth;
+    __declspec(property(get=GetimagerMMHeight,put=PutimagerMMHeight))
+    _variant_t imagerMMHeight;
+    __declspec(property(get=GetimagerMMFocalLength,put=PutimagerMMFocalLength))
+    _variant_t imagerMMFocalLength;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    _variant_t GetYaw ( );
+    _variant_t GetPitch ( );
+    _variant_t GetRoll ( );
+    _variant_t GetX ( );
+    _variant_t GetY ( );
+    _variant_t GetZ ( );
+    _variant_t Getdist01 ( );
+    void Putdist01 (
+        const _variant_t & pVal );
+    _variant_t Getdist02 ( );
+    void Putdist02 (
+        const _variant_t & pVal );
+    _variant_t Getdist12 ( );
+    void Putdist12 (
+        const _variant_t & pVal );
+    _variant_t Getdistol ( );
+    void Putdistol (
+        const _variant_t & pVal );
+    _variant_t GetTracking ( );
+    _variant_t GetimagerPixelWidth ( );
+    void PutimagerPixelWidth (
+        const _variant_t & pVal );
+    _variant_t GetimagerPixelHeight ( );
+    void PutimagerPixelHeight (
+        const _variant_t & pVal );
+    _variant_t GetimagerMMWidth ( );
+    void PutimagerMMWidth (
+        const _variant_t & pVal );
+    _variant_t GetimagerMMHeight ( );
+    void PutimagerMMHeight (
+        const _variant_t & pVal );
+    _variant_t GetimagerMMFocalLength ( );
+    void PutimagerMMFocalLength (
+        const _variant_t & pVal );
+    HRESULT Update (
+        struct INPCamera * pCamera,
+        struct INPCameraFrame * pFrame );
+    HRESULT Reset ( );
+    INPPointPtr GetPoint (
+        int nPoint );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_Yaw (
+        /*[out,retval]*/ VARIANT * pVal ) = 0;
+      virtual HRESULT __stdcall get_Pitch (
+        /*[out,retval]*/ VARIANT * pVal ) = 0;
+      virtual HRESULT __stdcall get_Roll (
+        /*[out,retval]*/ VARIANT * pVal ) = 0;
+      virtual HRESULT __stdcall get_X (
+        /*[out,retval]*/ VARIANT * pVal ) = 0;
+      virtual HRESULT __stdcall get_Y (
+        /*[out,retval]*/ VARIANT * pVal ) = 0;
+      virtual HRESULT __stdcall get_Z (
+        /*[out,retval]*/ VARIANT * pVal ) = 0;
+      virtual HRESULT __stdcall get_dist01 (
+        /*[out,retval]*/ VARIANT * pVal ) = 0;
+      virtual HRESULT __stdcall put_dist01 (
+        /*[in]*/ VARIANT pVal ) = 0;
+      virtual HRESULT __stdcall get_dist02 (
+        /*[out,retval]*/ VARIANT * pVal ) = 0;
+      virtual HRESULT __stdcall put_dist02 (
+        /*[in]*/ VARIANT pVal ) = 0;
+      virtual HRESULT __stdcall get_dist12 (
+        /*[out,retval]*/ VARIANT * pVal ) = 0;
+      virtual HRESULT __stdcall put_dist12 (
+        /*[in]*/ VARIANT pVal ) = 0;
+      virtual HRESULT __stdcall get_distol (
+        /*[out,retval]*/ VARIANT * pVal ) = 0;
+      virtual HRESULT __stdcall put_distol (
+        /*[in]*/ VARIANT pVal ) = 0;
+      virtual HRESULT __stdcall get_Tracking (
+        /*[out,retval]*/ VARIANT * pVal ) = 0;
+      virtual HRESULT __stdcall get_imagerPixelWidth (
+        /*[out,retval]*/ VARIANT * pVal ) = 0;
+      virtual HRESULT __stdcall put_imagerPixelWidth (
+        /*[in]*/ VARIANT pVal ) = 0;
+      virtual HRESULT __stdcall get_imagerPixelHeight (
+        /*[out,retval]*/ VARIANT * pVal ) = 0;
+      virtual HRESULT __stdcall put_imagerPixelHeight (
+        /*[in]*/ VARIANT pVal ) = 0;
+      virtual HRESULT __stdcall get_imagerMMWidth (
+        /*[out,retval]*/ VARIANT * pVal ) = 0;
+      virtual HRESULT __stdcall put_imagerMMWidth (
+        /*[in]*/ VARIANT pVal ) = 0;
+      virtual HRESULT __stdcall get_imagerMMHeight (
+        /*[out,retval]*/ VARIANT * pVal ) = 0;
+      virtual HRESULT __stdcall put_imagerMMHeight (
+        /*[in]*/ VARIANT pVal ) = 0;
+      virtual HRESULT __stdcall get_imagerMMFocalLength (
+        /*[out,retval]*/ VARIANT * pVal ) = 0;
+      virtual HRESULT __stdcall put_imagerMMFocalLength (
+        /*[in]*/ VARIANT pVal ) = 0;
+      virtual HRESULT __stdcall raw_Update (
+        /*[in]*/ struct INPCamera * pCamera,
+        /*[in]*/ struct INPCameraFrame * pFrame ) = 0;
+      virtual HRESULT __stdcall raw_Reset ( ) = 0;
+      virtual HRESULT __stdcall raw_GetPoint (
+        /*[in]*/ int nPoint,
+        /*[out,retval]*/ struct INPPoint * * ppPoint ) = 0;
+};
+
+struct __declspec(uuid("9124c9a9-9296-4e89-973d-4f3c502e36ca"))
+INPVector2 : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetYaw))
+    _variant_t Yaw;
+    __declspec(property(get=GetPitch))
+    _variant_t Pitch;
+    __declspec(property(get=GetRoll))
+    _variant_t Roll;
+    __declspec(property(get=GetX))
+    _variant_t X;
+    __declspec(property(get=GetY))
+    _variant_t Y;
+    __declspec(property(get=GetZ))
+    _variant_t Z;
+    __declspec(property(get=Getdist01,put=Putdist01))
+    _variant_t dist01;
+    __declspec(property(get=Getdist02,put=Putdist02))
+    _variant_t dist02;
+    __declspec(property(get=Getdist12,put=Putdist12))
+    _variant_t dist12;
+    __declspec(property(get=Getdistol,put=Putdistol))
+    _variant_t distol;
+    __declspec(property(get=GetTracking))
+    _variant_t Tracking;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    _variant_t GetYaw ( );
+    _variant_t GetPitch ( );
+    _variant_t GetRoll ( );
+    _variant_t GetX ( );
+    _variant_t GetY ( );
+    _variant_t GetZ ( );
+    _variant_t Getdist01 ( );
+    void Putdist01 (
+        const _variant_t & pVal );
+    _variant_t Getdist02 ( );
+    void Putdist02 (
+        const _variant_t & pVal );
+    _variant_t Getdist12 ( );
+    void Putdist12 (
+        const _variant_t & pVal );
+    _variant_t Getdistol ( );
+    void Putdistol (
+        const _variant_t & pVal );
+    _variant_t GetTracking ( );
+    HRESULT Update (
+        struct INPCamera * pCamera,
+        struct INPCameraFrame * pFrame );
+    HRESULT Reset ( );
+    INPPointPtr GetPoint (
+        int nPoint );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_Yaw (
+        /*[out,retval]*/ VARIANT * pVal ) = 0;
+      virtual HRESULT __stdcall get_Pitch (
+        /*[out,retval]*/ VARIANT * pVal ) = 0;
+      virtual HRESULT __stdcall get_Roll (
+        /*[out,retval]*/ VARIANT * pVal ) = 0;
+      virtual HRESULT __stdcall get_X (
+        /*[out,retval]*/ VARIANT * pVal ) = 0;
+      virtual HRESULT __stdcall get_Y (
+        /*[out,retval]*/ VARIANT * pVal ) = 0;
+      virtual HRESULT __stdcall get_Z (
+        /*[out,retval]*/ VARIANT * pVal ) = 0;
+      virtual HRESULT __stdcall get_dist01 (
+        /*[out,retval]*/ VARIANT * pVal ) = 0;
+      virtual HRESULT __stdcall put_dist01 (
+        /*[in]*/ VARIANT pVal ) = 0;
+      virtual HRESULT __stdcall get_dist02 (
+        /*[out,retval]*/ VARIANT * pVal ) = 0;
+      virtual HRESULT __stdcall put_dist02 (
+        /*[in]*/ VARIANT pVal ) = 0;
+      virtual HRESULT __stdcall get_dist12 (
+        /*[out,retval]*/ VARIANT * pVal ) = 0;
+      virtual HRESULT __stdcall put_dist12 (
+        /*[in]*/ VARIANT pVal ) = 0;
+      virtual HRESULT __stdcall get_distol (
+        /*[out,retval]*/ VARIANT * pVal ) = 0;
+      virtual HRESULT __stdcall put_distol (
+        /*[in]*/ VARIANT pVal ) = 0;
+      virtual HRESULT __stdcall get_Tracking (
+        /*[out,retval]*/ VARIANT * pVal ) = 0;
+      virtual HRESULT __stdcall raw_Update (
+        /*[in]*/ struct INPCamera * pCamera,
+        /*[in]*/ struct INPCameraFrame * pFrame ) = 0;
+      virtual HRESULT __stdcall raw_Reset ( ) = 0;
+      virtual HRESULT __stdcall raw_GetPoint (
+        /*[in]*/ int nPoint,
+        /*[out,retval]*/ struct INPPoint * * ppPoint ) = 0;
+};
+
+struct __declspec(uuid("9124c9a8-9296-4e89-973d-4f3c502e36ca"))
+INPVector : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetYaw))
+    _variant_t Yaw;
+    __declspec(property(get=GetPitch))
+    _variant_t Pitch;
+    __declspec(property(get=GetRoll))
+    _variant_t Roll;
+    __declspec(property(get=GetX))
+    _variant_t X;
+    __declspec(property(get=GetY))
+    _variant_t Y;
+    __declspec(property(get=GetZ))
+    _variant_t Z;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    _variant_t GetYaw ( );
+    _variant_t GetPitch ( );
+    _variant_t GetRoll ( );
+    _variant_t GetX ( );
+    _variant_t GetY ( );
+    _variant_t GetZ ( );
+    HRESULT Update (
+        struct INPCamera * pCamera,
+        struct INPCameraFrame * pFrame );
+    HRESULT Reset ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_Yaw (
+        /*[out,retval]*/ VARIANT * pVal ) = 0;
+      virtual HRESULT __stdcall get_Pitch (
+        /*[out,retval]*/ VARIANT * pVal ) = 0;
+      virtual HRESULT __stdcall get_Roll (
+        /*[out,retval]*/ VARIANT * pVal ) = 0;
+      virtual HRESULT __stdcall get_X (
+        /*[out,retval]*/ VARIANT * pVal ) = 0;
+      virtual HRESULT __stdcall get_Y (
+        /*[out,retval]*/ VARIANT * pVal ) = 0;
+      virtual HRESULT __stdcall get_Z (
+        /*[out,retval]*/ VARIANT * pVal ) = 0;
+      virtual HRESULT __stdcall raw_Update (
+        /*[in]*/ struct INPCamera * pCamera,
+        /*[in]*/ struct INPCameraFrame * pFrame ) = 0;
+      virtual HRESULT __stdcall raw_Reset ( ) = 0;
+};
+
+struct __declspec(uuid("9124ca00-9296-4e89-973d-4f3c502e36ca"))
+INPAvi : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetFileName,put=PutFileName))
+    _bstr_t FileName;
+    __declspec(property(get=GetFrameRate,put=PutFrameRate))
+    long FrameRate;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    _bstr_t GetFileName ( );
+    void PutFileName (
+        _bstr_t pVal );
+    long GetFrameRate ( );
+    void PutFrameRate (
+        long pVal );
+    HRESULT Start ( );
+    HRESULT Stop ( );
+    HRESULT AddFrame (
+        struct INPCamera * pCamera,
+        struct INPCameraFrame * pFrame );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_FileName (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall put_FileName (
+        /*[in]*/ BSTR pVal ) = 0;
+      virtual HRESULT __stdcall get_FrameRate (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall put_FrameRate (
+        /*[in]*/ long pVal ) = 0;
+      virtual HRESULT __stdcall raw_Start ( ) = 0;
+      virtual HRESULT __stdcall raw_Stop ( ) = 0;
+      virtual HRESULT __stdcall raw_AddFrame (
+        /*[in]*/ struct INPCamera * pCamera,
+        /*[in]*/ struct INPCameraFrame * pFrame ) = 0;
+};
+
+//
+// Wrapper method implementations
+//
+
+#include "c:\program files\naturalpoint\optitrack\samples\#### cam control ir-alz exp1\release\optitrack.tli"
+
+} // namespace OptiTrack
+
+#pragma pack(pop)

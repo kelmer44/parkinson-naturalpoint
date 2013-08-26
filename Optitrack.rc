@@ -1,0 +1,392 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Inglés (Estados Unidos) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\OptiTrack.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\OptiTrack.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Undo\tCtrl+Z",               ID_EDIT_UNDO
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t\tCtrl+X",                ID_EDIT_CUT
+        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "&Paste\tCtrl+V",              ID_EDIT_PASTE
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About Optitrack...",         ID_APP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS 
+BEGIN
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL, NOINVERT
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT, NOINVERT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT, NOINVERT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY, NOINVERT
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT, NOINVERT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT, NOINVERT
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL, NOINVERT
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 235, 55
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About OptiTrackSample"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "OptiTrackSample Version 2.0",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2006 NaturalPoint",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "OK",IDOK,178,7,50,14,WS_GROUP
+END
+
+IDD_CAMERA_LIST DIALOGEX 0, 0, 157, 111
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "IR-Alzheimer -cam control"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LTEXT           "&Cámaras disponibles:",IDC_STATIC,7,7,60,8
+    LISTBOX         IDC_LIST_CAMERAS,7,20,143,61,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "&Abrir...",IDC_BUTTON_OPEN,7,90,68,14
+    PUSHBUTTON      "Ayuda",IDC_BUTTON_MULTI,80,90,70,14
+END
+
+IDD_CAMERA DIALOGEX 0, 0, 364, 241
+STYLE DS_SETFONT | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "Camera"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LTEXT           "CAMID - S/N:",IDC_STATIC,2,7,46,8
+    LTEXT           "Static",IDC_STATIC_SERIAL_NUMBER,64,7,52,8
+    LTEXT           "Modelo:",IDC_STATIC,2,20,40,8
+    LTEXT           "Static",IDC_STATIC_MODEL,64,20,50,8
+    LTEXT           "Revisión:",IDC_STATIC,2,33,30,8
+    LTEXT           "Static",IDC_STATIC_REVISION,64,33,50,8
+    LTEXT           "Dimensiones:",IDC_STATIC,2,46,47,8
+    LTEXT           "Static",IDC_STATIC_DIMENSIONS,64,46,47,8
+    LTEXT           "Frame rate:",IDC_STATIC,2,59,43,8
+    LTEXT           "Static",IDC_STATIC_FRAME_RATE,64,59,50,8
+    LTEXT           "Switch state:",IDC_STATIC,2,72,49,8
+    LTEXT           "Static",IDC_STATIC_SWITCH_STATE,64,72,46,8
+    PUSHBUTTON      "&COMENZAR",IDC_BUTTON_START,117,223,159,14
+    PUSHBUTTON      "&Opciones...",IDC_BUTTON_OPTIONS,283,199,74,14
+    GROUPBOX        "LEDs",IDC_STATIC,2,195,110,39
+    CONTROL         "O&ne",IDC_CHECK_LED_ONE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,11,206,29,10
+    CONTROL         "&Two",IDC_CHECK_LED_TWO,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,11,217,30,10
+    CONTROL         "T&hree",IDC_CHECK_LED_THREE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,51,206,35,10
+    CONTROL         "&Four",IDC_CHECK_LED_FOUR,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,51,217,45,10
+    LTEXT           "Actualizar UI cada",IDC_STATIC,117,197,53,8
+    CONTROL         "Renderizar video",IDC_CHECK_DRAW_VIDEO,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,117,210,132,10
+    COMBOBOX        IDC_COMBO_UPDATE_RATE,198,196,70,67,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Vector tracking",IDC_STATIC,2,90,110,99
+    LTEXT           "Yaw:",IDC_STATIC,10,103,17,8
+    LTEXT           "Static",IDC_STATIC_YAW,40,103,47,8
+    LTEXT           "Pitch:",IDC_STATIC,10,114,19,8
+    LTEXT           "Static",IDC_STATIC_PITCH,40,114,47,8
+    LTEXT           "Roll:",IDC_STATIC,10,125,15,8
+    LTEXT           "Static",IDC_STATIC_ROLL,40,125,47,8
+    LTEXT           "Static",IDC_STATIC_X,38,135,40,8
+    LTEXT           "Static",IDC_STATIC_Y,38,146,40,8
+    LTEXT           "Static",IDC_STATIC_Z,38,157,40,8
+    PUSHBUTTON      "&Reset",IDC_BUTTON_RESET_VECTOR,283,223,74,14
+    LTEXT           "Static",IDC_FRAMEID,79,126,22,14
+    LTEXT           "X:",IDC_STATIC,10,135,8,8
+    LTEXT           "Y:",IDC_STATIC,10,146,8,8
+    LTEXT           "Z:",IDC_STATIC,10,157,8,8
+    GROUPBOX        "",IDC_STATIC_FRAME_IMAGE,117,7,242,180
+    LTEXT           "Area:",IDC_STATIC,8,175,18,8
+    LTEXT           "Static",IDC_STATIC_DOT_AREA,56,175,43,8
+    LTEXT           "Static",IDC_STATIC_DOT_POSITION,52,167,46,8
+    LTEXT           "Posición:",IDC_STATIC,8,167,28,8
+END
+
+IDD_CAMERA_OPTIONS DIALOGEX 0, 0, 350, 291
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Camera Options"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "Opciones dot tracking",IDC_STATIC,7,7,207,84
+    CONTROL         "&Estatus verde en tracking",IDC_CHECK_GREEN_ON_TRACKING,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,13,19,93,10
+    LTEXT           "Color objeto seguido:",IDC_STATIC,13,37,68,8
+    LTEXT           "Static",IDC_STATIC_TRACKED_COLOR,101,37,43,8
+    PUSHBUTTON      "&Cambiar...",IDC_BUTTON_TRACKED_COLOR,156,34,50,14
+    LTEXT           "Color objetos no-seguidos:",IDC_STATIC,13,53,78,8
+    LTEXT           "Static",IDC_STATIC_UNTRACKED_COLOR,101,53,43,8
+    PUSHBUTTON      "C&ambiar...",IDC_BUTTON_UNTRACKED_COLOR,156,50,50,14
+    LTEXT           "O&pcion color objeto:",IDC_STATIC,13,69,62,8
+    COMBOBOX        IDC_COMBO_OBJECT_COLOR_TYPE,84,67,124,95,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Parametros tracking",IDC_STATIC,7,97,208,120
+    LTEXT           "Tipo:",IDC_STATIC,13,112,19,8
+    COMBOBOX        IDC_COMBO_TRACKING_TYPE,54,111,135,107,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "&Peso:",IDC_STATIC,13,134,26,8
+    EDITTEXT        IDC_EDIT_WEIGHT,131,131,58,14,ES_AUTOHSCROLL
+    LTEXT           "&Min:",IDC_STATIC,13,150,14,8
+    EDITTEXT        IDC_EDIT_MIN,131,147,58,14,ES_AUTOHSCROLL
+    LTEXT           "Ma&x:",IDC_STATIC,13,166,16,8
+    EDITTEXT        IDC_EDIT_MAX,131,163,58,14,ES_AUTOHSCROLL
+    LTEXT           "I&deal:",IDC_STATIC,13,182,18,8
+    EDITTEXT        IDC_EDIT_IDEAL,131,179,58,14,ES_AUTOHSCROLL
+    LTEXT           "&Fuera de rango:",IDC_STATIC,13,198,42,8
+    EDITTEXT        IDC_EDIT_OUT_OF_RANGE,131,195,58,14,ES_AUTOHSCROLL
+    LTEXT           "Render escal&a:",IDC_STATIC,221,14,38,8
+    EDITTEXT        IDC_EDIT_DRAW_SCALE,264,11,40,14,ES_AUTOHSCROLL
+    LTEXT           "&Threshold:",IDC_STATIC,221,38,34,8
+    LTEXT           "Static",IDC_STATIC_THRESHOLD,324,38,19,8
+    CONTROL         "Slider1",IDC_SLIDER_THRESHOLD,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,243,48,100,15
+    PUSHBUTTON      "Revertir",IDCANCEL,293,270,50,14
+    LTEXT           "&Frame rate:",IDC_STATIC,221,69,40,8
+    CONTROL         "",IDC_SLIDER_FRAMERATE,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,243,79,100,15
+    LTEXT           "&Exposicion:",IDC_STATIC,221,100,32,8
+    CONTROL         "",IDC_SLIDER_EXPOSURE,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,243,110,100,15
+    CONTROL         "&Escala grises",IDC_GREY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,273,240,65,10
+    CONTROL         "&Video Overlay",IDC_VIDEOOVERLAY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,273,255,65,10
+    EDITTEXT        IDC_EDIT_X_END,124,230,25,16,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_X,82,230,22,16,ES_AUTOHSCROLL
+    LTEXT           "X, X_END",IDC_STATIC,34,233,37,11
+    EDITTEXT        IDC_EDIT_Y_END,123,252,25,16,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_Y,80,252,23,16,ES_AUTOHSCROLL
+    LTEXT           "Y Y_END",IDC_STATIC,36,256,37,13
+    EDITTEXT        IDC_ID,187,267,39,15,ES_CENTER | ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "Static",IDC_STATIC_FRAMERATE,324,68,19,8
+    LTEXT           "Static",IDC_STATIC_EXPOSURE,324,103,19,8
+    RTEXT           "Id",IDC_STATIC,142,269,38,13
+    GROUPBOX        "Extiende",IDC_STATIC_EXTANTS,7,217,158,67
+    LTEXT           "&Intensidad",IDC_STATIC,221,131,27,8
+    CONTROL         "",IDC_SLIDER_INTENSITY,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,243,141,100,15
+    LTEXT           "Static",IDC_STATIC_INTENSITY,324,134,19,8
+    EDITTEXT        IDC_DECIMATION,217,227,40,14,ES_AUTOHSCROLL
+    RTEXT           "Decimación",IDC_STATIC_DECIMATION,172,230,37,11
+    RTEXT           "Decimación espacial",IDC_STATIC_DECIMATION_SPATIAL,169,244,66,11
+    EDITTEXT        IDC_DECIMATION_SPATIAL,238,243,15,14,ES_AUTOHSCROLL
+    LTEXT           "&Minimo Long Seg",IDC_STATIC,221,162,57,8
+    CONTROL         "",IDC_SLIDER_MINLEN,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,243,172,100,15
+    LTEXT           "Static",IDC_STATIC_MINLEN,324,164,19,8
+    LTEXT           "Ma&ximo Long Seg",IDC_STATIC,221,191,59,8
+    CONTROL         "",IDC_SLIDER_MAXLEN,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,243,201,100,15
+    LTEXT           "Static",IDC_STATIC_MAXLEN,324,193,19,8
+    PUSHBUTTON      "Reset conteo",IDC_RESET_FRAME_COUNT,281,223,50,14
+    PUSHBUTTON      "Aplicar",IDAPPLY,234,270,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "FileDescription", "IR-Alzheimer -optitrack app"
+            VALUE "FileVersion", "1, 0, 0, 5"
+            VALUE "InternalName", "IR-Alzheimer -optitrack"
+            VALUE "LegalCopyright", "Copyright (C) 2009"
+            VALUE "OriginalFilename", "IR-Alzheimer -optitrack app.exe"
+            VALUE "ProductName", "IR-Alzheimer -control optitrack-"
+            VALUE "ProductVersion", "1, 0, 0, 5"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_CAMERA_LIST, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 150
+        VERTGUIDE, 150
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 104
+    END
+
+    IDD_CAMERA, DIALOG
+    BEGIN
+        LEFTMARGIN, 2
+        VERTGUIDE, 8
+        VERTGUIDE, 12
+        VERTGUIDE, 116
+        VERTGUIDE, 117
+        VERTGUIDE, 359
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 237
+    END
+
+    IDD_CAMERA_OPTIONS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 343
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 284
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "&About OptiTrackSample..."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STOP                "Stop"
+    IDS_START               "COMENZAR"
+END
+
+#endif    // Inglés (Estados Unidos) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\OptiTrack.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

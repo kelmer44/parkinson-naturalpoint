@@ -1,0 +1,935 @@
+﻿// Created by Microsoft (R) C/C++ Compiler Version 15.00.30729.01 (866aa974).
+//
+// c:\program files\naturalpoint\optitrack\samples\#### cam control ir-alz exp1\release\optitrack.tli
+//
+// Wrapper implementations for Win32 type library optitrack.tlb
+// compiler-generated file created 03/03/11 at 13:40:29 - DO NOT EDIT!
+
+#pragma once
+
+//
+// dispinterface _INPCameraCollectionEvents wrapper method implementations
+//
+
+inline HRESULT _INPCameraCollectionEvents::DeviceRemoval ( struct INPCamera * pCamera ) {
+    return _com_dispatch_method(this, 0x1, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0009", pCamera);
+}
+
+inline HRESULT _INPCameraCollectionEvents::DeviceArrival ( struct INPCamera * pCamera ) {
+    return _com_dispatch_method(this, 0x2, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0009", pCamera);
+}
+
+inline HRESULT _INPCameraCollectionEvents::FrameAvailableId ( long Group, long Id ) {
+    return _com_dispatch_method(this, 0x3, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0003", Group, Id);
+}
+
+//
+// dispinterface _INPCameraEvents wrapper method implementations
+//
+
+inline HRESULT _INPCameraEvents::FrameAvailable ( struct INPCamera * pCamera ) {
+    return _com_dispatch_method(this, 0x1, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0009", pCamera);
+}
+
+inline HRESULT _INPCameraEvents::SwitchChange ( struct INPCamera * pCamera, long lNewSwitchState ) {
+    return _com_dispatch_method(this, 0x2, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0009\x0003", pCamera, lNewSwitchState);
+}
+
+inline HRESULT _INPCameraEvents::FrameAvailableIdCamera ( struct INPCamera * pCamera, long Group, long Id ) {
+    return _com_dispatch_method(this, 0x3, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0009\x0003\x0003", pCamera, Group, Id);
+}
+
+//
+// interface INPSmoothing wrapper method implementations
+//
+
+inline _variant_t INPSmoothing::GetAmount ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_Amount(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline void INPSmoothing::PutAmount ( const _variant_t & pVal ) {
+    HRESULT _hr = put_Amount(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _variant_t INPSmoothing::GetX ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_X(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline _variant_t INPSmoothing::GetY ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_Y(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline HRESULT INPSmoothing::Update ( const _variant_t & ValX, const _variant_t & ValY ) {
+    HRESULT _hr = raw_Update(ValX, ValY);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT INPSmoothing::Reset ( ) {
+    HRESULT _hr = raw_Reset();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface INPPoint wrapper method implementations
+//
+
+inline _variant_t INPPoint::GetX ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_X(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline _variant_t INPPoint::GetY ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_Y(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline _variant_t INPPoint::GetZ ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_Z(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+//
+// interface INPCamera wrapper method implementations
+//
+
+inline long INPCamera::GetSerialNumber ( ) {
+    long _result = 0;
+    HRESULT _hr = get_SerialNumber(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long INPCamera::GetModel ( ) {
+    long _result = 0;
+    HRESULT _hr = get_Model(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long INPCamera::GetRevision ( ) {
+    long _result = 0;
+    HRESULT _hr = get_Revision(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long INPCamera::GetWidth ( ) {
+    long _result = 0;
+    HRESULT _hr = get_Width(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long INPCamera::GetHeight ( ) {
+    long _result = 0;
+    HRESULT _hr = get_Height(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long INPCamera::GetFrameRate ( ) {
+    long _result = 0;
+    HRESULT _hr = get_FrameRate(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long INPCamera::GetBlockingMaskWidth ( ) {
+    long _result = 0;
+    HRESULT _hr = get_BlockingMaskWidth(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long INPCamera::GetBlockingMaskHeight ( ) {
+    long _result = 0;
+    HRESULT _hr = get_BlockingMaskHeight(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT INPCamera::Start ( ) {
+    HRESULT _hr = raw_Start();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT INPCamera::Stop ( ) {
+    HRESULT _hr = raw_Stop();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT INPCamera::Open ( ) {
+    HRESULT _hr = raw_Open();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT INPCamera::Close ( ) {
+    HRESULT _hr = raw_Close();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT INPCamera::SetLED ( long lLED, VARIANT_BOOL fOn ) {
+    HRESULT _hr = raw_SetLED(lLED, fOn);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline INPCameraFramePtr INPCamera::GetFrame ( long lTimeout ) {
+    struct INPCameraFrame * _result = 0;
+    HRESULT _hr = raw_GetFrame(lTimeout, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return INPCameraFramePtr(_result, false);
+}
+
+inline HRESULT INPCamera::DrawFrame ( struct INPCameraFrame * pFrame, long hwnd ) {
+    HRESULT _hr = raw_DrawFrame(pFrame, hwnd);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT INPCamera::ResetTrackedObject ( ) {
+    HRESULT _hr = raw_ResetTrackedObject();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline _variant_t INPCamera::GetOption ( long lOption ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = raw_GetOption(lOption, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline HRESULT INPCamera::SetOption ( long lOption, const _variant_t & Val ) {
+    HRESULT _hr = raw_SetOption(lOption, Val);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline INPCameraFramePtr INPCamera::GetFrameById ( long Id ) {
+    struct INPCameraFrame * _result = 0;
+    HRESULT _hr = raw_GetFrameById(Id, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return INPCameraFramePtr(_result, false);
+}
+
+inline HRESULT INPCamera::GetFrameImage ( struct INPCameraFrame * pFrame, int PixelWidth, int PixelHeight, int ByteSpan, int BitsPerPixel, unsigned char * Buffer ) {
+    HRESULT _hr = raw_GetFrameImage(pFrame, PixelWidth, PixelHeight, ByteSpan, BitsPerPixel, Buffer);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT INPCamera::SetVideo ( VARIANT_BOOL fOn ) {
+    HRESULT _hr = raw_SetVideo(fOn);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT INPCamera::ClearBlockingMask ( ) {
+    HRESULT _hr = raw_ClearBlockingMask();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT INPCamera::EnableBlockingMask ( ) {
+    HRESULT _hr = raw_EnableBlockingMask();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT INPCamera::DisableBlockingMask ( ) {
+    HRESULT _hr = raw_DisableBlockingMask();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT INPCamera::AddBlockingRectangle ( long X1, long Y1, long X2, long Y2 ) {
+    HRESULT _hr = raw_AddBlockingRectangle(X1, Y1, X2, Y2);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT INPCamera::RemoveBlockingRectangle ( long X1, long Y1, long X2, long Y2 ) {
+    HRESULT _hr = raw_RemoveBlockingRectangle(X1, Y1, X2, Y2);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT INPCamera::GetBlockingMask ( unsigned char * Buffer, long BufferSize ) {
+    HRESULT _hr = raw_GetBlockingMask(Buffer, BufferSize);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT INPCamera::SetBlockingMask ( unsigned char * Buffer, long BufferSize ) {
+    HRESULT _hr = raw_SetBlockingMask(Buffer, BufferSize);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT INPCamera::UpdateBlockingMask ( ) {
+    HRESULT _hr = raw_UpdateBlockingMask();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface INPObject wrapper method implementations
+//
+
+inline _variant_t INPObject::GetArea ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_Area(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline _variant_t INPObject::GetX ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_X(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline _variant_t INPObject::GetY ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_Y(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline _variant_t INPObject::GetScore ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_Score(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline long INPObject::GetRank ( ) {
+    long _result = 0;
+    HRESULT _hr = get_Rank(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long INPObject::GetWidth ( ) {
+    long _result = 0;
+    HRESULT _hr = get_Width(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long INPObject::GetHeight ( ) {
+    long _result = 0;
+    HRESULT _hr = get_Height(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT INPObject::Transform ( struct INPCamera * pCamera ) {
+    HRESULT _hr = raw_Transform(pCamera);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface INPCameraFrame wrapper method implementations
+//
+
+inline IUnknownPtr INPCameraFrame::Get_NewEnum ( ) {
+    IUnknown * _result = 0;
+    HRESULT _hr = get__NewEnum(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IUnknownPtr(_result, false);
+}
+
+inline long INPCameraFrame::GetCount ( ) {
+    long _result = 0;
+    HRESULT _hr = get_Count(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline INPObjectPtr INPCameraFrame::Item ( long a_vlIndex ) {
+    struct INPObject * _result = 0;
+    HRESULT _hr = raw_Item(a_vlIndex, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return INPObjectPtr(_result, false);
+}
+
+inline long INPCameraFrame::GetId ( ) {
+    long _result = 0;
+    HRESULT _hr = get_Id(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long INPCameraFrame::GetSwitchState ( ) {
+    long _result = 0;
+    HRESULT _hr = get_SwitchState(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL INPCameraFrame::GetIsEmpty ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_IsEmpty(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL INPCameraFrame::GetIsCorrupt ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_IsCorrupt(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL INPCameraFrame::GetIsGreyscale ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_IsGreyscale(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _variant_t INPCameraFrame::GetTimeStamp ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_TimeStamp(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline _variant_t INPCameraFrame::GetTimeStampFrequency ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_TimeStampFrequency(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline long INPCameraFrame::GetObjectData ( unsigned char * Buffer, int BufferSize ) {
+    long _result = 0;
+    HRESULT _hr = raw_GetObjectData(Buffer, BufferSize, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT INPCameraFrame::Free ( ) {
+    HRESULT _hr = raw_Free();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface INPCameraCollection wrapper method implementations
+//
+
+inline IUnknownPtr INPCameraCollection::Get_NewEnum ( ) {
+    IUnknown * _result = 0;
+    HRESULT _hr = get__NewEnum(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IUnknownPtr(_result, false);
+}
+
+inline long INPCameraCollection::GetCount ( ) {
+    long _result = 0;
+    HRESULT _hr = get_Count(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline INPCameraPtr INPCameraCollection::Item ( long a_vlIndex ) {
+    struct INPCamera * _result = 0;
+    HRESULT _hr = raw_Item(a_vlIndex, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return INPCameraPtr(_result, false);
+}
+
+inline HRESULT INPCameraCollection::Enum ( ) {
+    HRESULT _hr = raw_Enum();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT INPCameraCollection::Synchronize ( ) {
+    HRESULT _hr = raw_Synchronize();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface INPVector3 wrapper method implementations
+//
+
+inline _variant_t INPVector3::GetYaw ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_Yaw(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline _variant_t INPVector3::GetPitch ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_Pitch(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline _variant_t INPVector3::GetRoll ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_Roll(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline _variant_t INPVector3::GetX ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_X(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline _variant_t INPVector3::GetY ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_Y(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline _variant_t INPVector3::GetZ ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_Z(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline _variant_t INPVector3::Getdist01 ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_dist01(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline void INPVector3::Putdist01 ( const _variant_t & pVal ) {
+    HRESULT _hr = put_dist01(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _variant_t INPVector3::Getdist02 ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_dist02(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline void INPVector3::Putdist02 ( const _variant_t & pVal ) {
+    HRESULT _hr = put_dist02(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _variant_t INPVector3::Getdist12 ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_dist12(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline void INPVector3::Putdist12 ( const _variant_t & pVal ) {
+    HRESULT _hr = put_dist12(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _variant_t INPVector3::Getdistol ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_distol(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline void INPVector3::Putdistol ( const _variant_t & pVal ) {
+    HRESULT _hr = put_distol(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _variant_t INPVector3::GetTracking ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_Tracking(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline _variant_t INPVector3::GetimagerPixelWidth ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_imagerPixelWidth(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline void INPVector3::PutimagerPixelWidth ( const _variant_t & pVal ) {
+    HRESULT _hr = put_imagerPixelWidth(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _variant_t INPVector3::GetimagerPixelHeight ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_imagerPixelHeight(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline void INPVector3::PutimagerPixelHeight ( const _variant_t & pVal ) {
+    HRESULT _hr = put_imagerPixelHeight(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _variant_t INPVector3::GetimagerMMWidth ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_imagerMMWidth(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline void INPVector3::PutimagerMMWidth ( const _variant_t & pVal ) {
+    HRESULT _hr = put_imagerMMWidth(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _variant_t INPVector3::GetimagerMMHeight ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_imagerMMHeight(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline void INPVector3::PutimagerMMHeight ( const _variant_t & pVal ) {
+    HRESULT _hr = put_imagerMMHeight(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _variant_t INPVector3::GetimagerMMFocalLength ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_imagerMMFocalLength(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline void INPVector3::PutimagerMMFocalLength ( const _variant_t & pVal ) {
+    HRESULT _hr = put_imagerMMFocalLength(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline HRESULT INPVector3::Update ( struct INPCamera * pCamera, struct INPCameraFrame * pFrame ) {
+    HRESULT _hr = raw_Update(pCamera, pFrame);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT INPVector3::Reset ( ) {
+    HRESULT _hr = raw_Reset();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline INPPointPtr INPVector3::GetPoint ( int nPoint ) {
+    struct INPPoint * _result = 0;
+    HRESULT _hr = raw_GetPoint(nPoint, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return INPPointPtr(_result, false);
+}
+
+//
+// interface INPVector2 wrapper method implementations
+//
+
+inline _variant_t INPVector2::GetYaw ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_Yaw(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline _variant_t INPVector2::GetPitch ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_Pitch(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline _variant_t INPVector2::GetRoll ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_Roll(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline _variant_t INPVector2::GetX ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_X(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline _variant_t INPVector2::GetY ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_Y(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline _variant_t INPVector2::GetZ ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_Z(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline _variant_t INPVector2::Getdist01 ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_dist01(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline void INPVector2::Putdist01 ( const _variant_t & pVal ) {
+    HRESULT _hr = put_dist01(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _variant_t INPVector2::Getdist02 ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_dist02(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline void INPVector2::Putdist02 ( const _variant_t & pVal ) {
+    HRESULT _hr = put_dist02(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _variant_t INPVector2::Getdist12 ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_dist12(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline void INPVector2::Putdist12 ( const _variant_t & pVal ) {
+    HRESULT _hr = put_dist12(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _variant_t INPVector2::Getdistol ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_distol(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline void INPVector2::Putdistol ( const _variant_t & pVal ) {
+    HRESULT _hr = put_distol(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _variant_t INPVector2::GetTracking ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_Tracking(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline HRESULT INPVector2::Update ( struct INPCamera * pCamera, struct INPCameraFrame * pFrame ) {
+    HRESULT _hr = raw_Update(pCamera, pFrame);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT INPVector2::Reset ( ) {
+    HRESULT _hr = raw_Reset();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline INPPointPtr INPVector2::GetPoint ( int nPoint ) {
+    struct INPPoint * _result = 0;
+    HRESULT _hr = raw_GetPoint(nPoint, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return INPPointPtr(_result, false);
+}
+
+//
+// interface INPVector wrapper method implementations
+//
+
+inline _variant_t INPVector::GetYaw ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_Yaw(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline _variant_t INPVector::GetPitch ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_Pitch(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline _variant_t INPVector::GetRoll ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_Roll(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline _variant_t INPVector::GetX ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_X(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline _variant_t INPVector::GetY ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_Y(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline _variant_t INPVector::GetZ ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_Z(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline HRESULT INPVector::Update ( struct INPCamera * pCamera, struct INPCameraFrame * pFrame ) {
+    HRESULT _hr = raw_Update(pCamera, pFrame);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT INPVector::Reset ( ) {
+    HRESULT _hr = raw_Reset();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface INPAvi wrapper method implementations
+//
+
+inline _bstr_t INPAvi::GetFileName ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_FileName(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void INPAvi::PutFileName ( _bstr_t pVal ) {
+    HRESULT _hr = put_FileName(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long INPAvi::GetFrameRate ( ) {
+    long _result = 0;
+    HRESULT _hr = get_FrameRate(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void INPAvi::PutFrameRate ( long pVal ) {
+    HRESULT _hr = put_FrameRate(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline HRESULT INPAvi::Start ( ) {
+    HRESULT _hr = raw_Start();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT INPAvi::Stop ( ) {
+    HRESULT _hr = raw_Stop();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT INPAvi::AddFrame ( struct INPCamera * pCamera, struct INPCameraFrame * pFrame ) {
+    HRESULT _hr = raw_AddFrame(pCamera, pFrame);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}

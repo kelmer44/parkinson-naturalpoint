@@ -1,0 +1,61 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="39FD1048-4364-4CAC-81F6-3110F3429F61/f:medicos_mat.h" caret="10908" fromTop="6" />
+      <File id="39FD1048-4364-4CAC-81F6-3110F3429F61/f:CameraDlg.h" caret="3598" fromTop="7" />
+      <File id="39FD1048-4364-4CAC-81F6-3110F3429F61/f:Optitrack.cpp" caret="472" fromTop="6" />
+      <File id="39FD1048-4364-4CAC-81F6-3110F3429F61/f:OptiTrackSampleDlg.cpp" caret="138" fromTop="0" />
+      <File id="39FD1048-4364-4CAC-81F6-3110F3429F61/f:CameraDlg.cpp" caret="29461" fromTop="23" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="39FD1048-4364-4CAC-81F6-3110F3429F61/f:CameraDlg.cpp" caret="27551" fromTop="22" />
+      <File id="39FD1048-4364-4CAC-81F6-3110F3429F61/f:CameraDlg.h" caret="6317" fromTop="19" />
+      <File id="39FD1048-4364-4CAC-81F6-3110F3429F61/f:CameraDlg.cpp" caret="29711" fromTop="29" />
+      <File id="39FD1048-4364-4CAC-81F6-3110F3429F61/f:CameraDlg.cpp" caret="29859" fromTop="23" />
+      <File id="39FD1048-4364-4CAC-81F6-3110F3429F61/f:CameraDlg.cpp" caret="29859" fromTop="31" />
+      <File id="39FD1048-4364-4CAC-81F6-3110F3429F61/f:CameraDlg.cpp" caret="35978" fromTop="22" />
+      <File id="39FD1048-4364-4CAC-81F6-3110F3429F61/f:CameraDlg.cpp" caret="36651" fromTop="17" />
+      <File id="39FD1048-4364-4CAC-81F6-3110F3429F61/f:CameraDlg.cpp" caret="36600" fromTop="16" />
+      <File id="39FD1048-4364-4CAC-81F6-3110F3429F61/f:CameraDlg.cpp" caret="36614" fromTop="17" />
+      <File id="39FD1048-4364-4CAC-81F6-3110F3429F61/f:CameraDlg.cpp" caret="2440" fromTop="16" />
+      <File id="39FD1048-4364-4CAC-81F6-3110F3429F61/f:CameraDlg.cpp" caret="36627" fromTop="16" />
+      <File id="39FD1048-4364-4CAC-81F6-3110F3429F61/f:CameraDlg.cpp" caret="37034" fromTop="23" />
+      <File id="39FD1048-4364-4CAC-81F6-3110F3429F61/f:CameraDlg.cpp" caret="36927" fromTop="31" />
+      <File id="39FD1048-4364-4CAC-81F6-3110F3429F61/f:CameraDlg.cpp" caret="36930" fromTop="27" />
+      <File id="39FD1048-4364-4CAC-81F6-3110F3429F61/f:CameraDlg.cpp" caret="19590" fromTop="22" />
+      <File id="39FD1048-4364-4CAC-81F6-3110F3429F61/f:CameraDlg.cpp" caret="1856" fromTop="26" />
+      <File id="39FD1048-4364-4CAC-81F6-3110F3429F61/f:CameraDlg.cpp" caret="1675" fromTop="24" />
+      <File id="39FD1048-4364-4CAC-81F6-3110F3429F61/f:CameraDlg.cpp" caret="1671" fromTop="19" />
+      <File id="39FD1048-4364-4CAC-81F6-3110F3429F61/f:CameraDlg.cpp" caret="19585" fromTop="30" />
+      <File id="39FD1048-4364-4CAC-81F6-3110F3429F61/f:CameraDlg.cpp" caret="1332" fromTop="2" />
+      <File id="39FD1048-4364-4CAC-81F6-3110F3429F61/f:CameraDlg.cpp" caret="1648" fromTop="7" />
+      <File id="39FD1048-4364-4CAC-81F6-3110F3429F61/f:CameraDlg.cpp" caret="28052" fromTop="15" />
+      <File id="39FD1048-4364-4CAC-81F6-3110F3429F61/f:CameraDlg.cpp" caret="28621" fromTop="32" />
+      <File id="39FD1048-4364-4CAC-81F6-3110F3429F61/f:CameraDlg.cpp" caret="28621" fromTop="18" />
+      <File id="39FD1048-4364-4CAC-81F6-3110F3429F61/f:CameraDlg.cpp" caret="26152" fromTop="11" />
+      <File id="39FD1048-4364-4CAC-81F6-3110F3429F61/f:CameraDlg.cpp" caret="29408" fromTop="5" />
+      <File id="39FD1048-4364-4CAC-81F6-3110F3429F61/f:CameraDlg.cpp" caret="29764" fromTop="17" />
+      <File id="39FD1048-4364-4CAC-81F6-3110F3429F61/f:CameraDlg.cpp" caret="29350" fromTop="4" />
+      <File id="39FD1048-4364-4CAC-81F6-3110F3429F61/f:CameraDlg.cpp" caret="29674" fromTop="12" />
+      <File id="39FD1048-4364-4CAC-81F6-3110F3429F61/f:CameraDlg.cpp" caret="30092" fromTop="28" />
+    </RecentEdits>
+  </RecentFiles>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir IsNull="False">
+    </NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+</Configuration>

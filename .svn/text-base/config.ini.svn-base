@@ -1,0 +1,46 @@
+# Generado por el motor usando valores por defecto.
+
+# Generado por el motor.
+# Uso de valores de configuración del usuario.
+
+g_anchoScreen= 800
+g_altoScreen= 600
+roll_menu= 1
+roll_archivos= 0
+roll_opciones= 0
+roll_iluminacion= 0
+roll_informes= 0
+roll_configuracion= 0
+roll_visualizacion= 0
+roll_controles= 1
+roll_mov= 0
+luz1= 1
+luz2= 1
+luz1_qt= 1.000000
+luz2_qt= 0.500000
+inf1= 0
+inf2= 0
+inf3= 0
+inf4= 0
+inf5= 0
+inf6= 0
+inf7= 0
+inf8= 0
+inf9= 0
+inf10= 0
+inf11= 0
+inf12= 0
+inf13= 0
+inf14= 0
+infAutoGen= 0
+infReutilizar= 0
+confWriteLog= 1
+confAnclar= 0
+vis_size_puntos= 0
+vis_puntos= 0
+vis_bbox= 1
+vis_panel= 1
+vis_info= 1
+vis_fps= 0
+vis_cenital= 1
+vis_corte= 1

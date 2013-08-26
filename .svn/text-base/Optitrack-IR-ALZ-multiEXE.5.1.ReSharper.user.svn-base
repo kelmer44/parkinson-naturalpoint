@@ -1,0 +1,59 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="39FD1048-4364-4CAC-81F6-3110F3429F61/f:CameraDlg.h" caret="6811" fromTop="32" />
+      <File id="39FD1048-4364-4CAC-81F6-3110F3429F61/f:medicos_mat.h" caret="10908" fromTop="34" />
+      <File id="39FD1048-4364-4CAC-81F6-3110F3429F61/f:CameraDlg.cpp" caret="27082" fromTop="16" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="39FD1048-4364-4CAC-81F6-3110F3429F61/f:CameraDlg.cpp" caret="0" fromTop="0" />
+      <File id="39FD1048-4364-4CAC-81F6-3110F3429F61/f:CameraDlg.cpp" caret="28612" fromTop="25" />
+      <File id="39FD1048-4364-4CAC-81F6-3110F3429F61/f:CameraDlg.cpp" caret="29776" fromTop="13" />
+      <File id="39FD1048-4364-4CAC-81F6-3110F3429F61/f:CameraDlg.cpp" caret="32349" fromTop="26" />
+      <File id="39FD1048-4364-4CAC-81F6-3110F3429F61/f:CameraDlg.cpp" caret="28885" fromTop="17" />
+      <File id="39FD1048-4364-4CAC-81F6-3110F3429F61/f:CameraDlg.cpp" caret="30139" fromTop="30" />
+      <File id="39FD1048-4364-4CAC-81F6-3110F3429F61/f:CameraDlg.cpp" caret="30586" fromTop="28" />
+      <File id="39FD1048-4364-4CAC-81F6-3110F3429F61/f:CameraDlg.cpp" caret="28760" fromTop="23" />
+      <File id="39FD1048-4364-4CAC-81F6-3110F3429F61/f:CameraDlg.cpp" caret="27871" fromTop="21" />
+      <File id="39FD1048-4364-4CAC-81F6-3110F3429F61/f:CameraDlg.cpp" caret="33891" fromTop="18" />
+      <File id="39FD1048-4364-4CAC-81F6-3110F3429F61/f:CameraDlg.cpp" caret="40955" fromTop="35" />
+      <File id="39FD1048-4364-4CAC-81F6-3110F3429F61/f:CameraDlg.cpp" caret="31313" fromTop="30" />
+      <File id="39FD1048-4364-4CAC-81F6-3110F3429F61/f:CameraDlg.cpp" caret="29771" fromTop="18" />
+      <File id="39FD1048-4364-4CAC-81F6-3110F3429F61/f:CameraDlg.cpp" caret="31373" fromTop="12" />
+      <File id="39FD1048-4364-4CAC-81F6-3110F3429F61/f:CameraDlg.cpp" caret="32878" fromTop="5" />
+      <File id="39FD1048-4364-4CAC-81F6-3110F3429F61/f:CameraDlg.cpp" caret="34363" fromTop="29" />
+      <File id="39FD1048-4364-4CAC-81F6-3110F3429F61/f:CameraDlg.cpp" caret="32296" fromTop="6" />
+      <File id="39FD1048-4364-4CAC-81F6-3110F3429F61/f:CameraDlg.cpp" caret="26701" fromTop="16" />
+      <File id="39FD1048-4364-4CAC-81F6-3110F3429F61/f:CameraDlg.cpp" caret="34402" fromTop="11" />
+      <File id="39FD1048-4364-4CAC-81F6-3110F3429F61/f:CameraDlg.cpp" caret="25847" fromTop="17" />
+      <File id="39FD1048-4364-4CAC-81F6-3110F3429F61/f:CameraDlg.cpp" caret="26701" fromTop="21" />
+      <File id="39FD1048-4364-4CAC-81F6-3110F3429F61/f:CameraDlg.cpp" caret="26701" fromTop="11" />
+      <File id="39FD1048-4364-4CAC-81F6-3110F3429F61/f:CameraDlg.cpp" caret="27084" fromTop="13" />
+      <File id="39FD1048-4364-4CAC-81F6-3110F3429F61/f:CameraDlg.cpp" caret="27540" fromTop="20" />
+      <File id="39FD1048-4364-4CAC-81F6-3110F3429F61/f:CameraDlg.cpp" caret="26701" fromTop="24" />
+      <File id="39FD1048-4364-4CAC-81F6-3110F3429F61/f:CameraDlg.cpp" caret="25509" fromTop="18" />
+      <File id="39FD1048-4364-4CAC-81F6-3110F3429F61/f:CameraDlg.cpp" caret="27264" fromTop="22" />
+      <File id="39FD1048-4364-4CAC-81F6-3110F3429F61/f:CameraDlg.cpp" caret="27676" fromTop="16" />
+      <File id="39FD1048-4364-4CAC-81F6-3110F3429F61/f:CameraDlg.cpp" caret="34268" fromTop="25" />
+      <File id="39FD1048-4364-4CAC-81F6-3110F3429F61/f:CameraDlg.cpp" caret="27063" fromTop="14" />
+    </RecentEdits>
+  </RecentFiles>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir IsNull="False">
+    </NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+</Configuration>

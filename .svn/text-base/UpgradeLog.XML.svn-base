@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="Optitrack-IR-ALZ-multiEXE">
+</Property><Property Name="Archivo de la solución" Value="C:\Archivos de programa\NaturalPoint\Optitrack\samples\## sample1 IR-ALZ\Optitrack-IR-ALZ-multiEXE.sln">
+</Property><Property Name="Archivo de opciones de usuario" Value="C:\Archivos de programa\NaturalPoint\Optitrack\samples\## sample1 IR-ALZ\Optitrack-IR-ALZ-multiEXE.suo">
+</Property><Property Name="Date" Value="martes, 20 de enero de 2009">
+</Property><Property Name="Time" Value="13:49">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="Optitrack-IR-ALZ-multiEXE.sln" Description="La copia C:\Archivos de programa\NaturalPoint\Optitrack\samples\## sample1 IR-ALZ\Optitrack-IR-ALZ-multiEXE.sln.old del archivo se ha realizado correctamente">
+</Event><Event ErrorLevel="0" Project="" Source="Optitrack-IR-ALZ-multiEXE.suo" Description="La copia C:\Archivos de programa\NaturalPoint\Optitrack\samples\## sample1 IR-ALZ\Optitrack-IR-ALZ-multiEXE.suo.old del archivo se ha realizado correctamente">
+</Event><Event ErrorLevel="0" Project="Optitrack-IR-ALZ-multiEXE" Source="Optitrack-IR-ALZ-multiEXE.vcproj" Description="Ya no se permite la implementación web en el servidor de IIS local. La herramienta de generación de implementación web se ha quitado de la configuración del proyecto.">
+</Event><Event ErrorLevel="1" Project="Optitrack-IR-ALZ-multiEXE" Source="Optitrack-IR-ALZ-multiEXE.vcproj" Description="Esta aplicación se ha actualizado para incluir la configuración relacionada con la característica Control de cuentas de usuario (UAC) de Windows Vista. De manera predeterminada, cuando se ejecuta en Windows Vista con el Control de cuentas de usuario habilitado, la aplicación está marcada para que se ejecute con los mismos privilegios que el proceso que la inició y para que no pueda ejecutarse con virtualización. Puede cambiar la configuración relativa al Control de cuentas de usuario desde las páginas de propiedades del proyecto.">
+</Event><Event ErrorLevel="0" Project="Optitrack-IR-ALZ-multiEXE" Source="Optitrack-IR-ALZ-multiEXE.vcproj" Description="Se realizó correctamente la copia de seguridad del archivo de proyecto 'C:\Archivos de programa\NaturalPoint\Optitrack\samples\## sample1 IR-ALZ\Optitrack-IR-ALZ-multiEXE.vcproj.8.00.old'.">
+</Event><Event ErrorLevel="0" Project="Optitrack-IR-ALZ-multiEXE" Source="Optitrack-IR-ALZ-multiEXE.vcproj" Description="Proyecto actualizado correctamente.">
+</Event><Event ErrorLevel="3" Project="Optitrack-IR-ALZ-multiEXE" Source="Optitrack-IR-ALZ-multiEXE.vcproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="Optitrack-IR-ALZ-multiEXE.sln" Description="La solución se convirtió correctamente">
+</Event><Event ErrorLevel="3" Project="" Source="Optitrack-IR-ALZ-multiEXE.sln" Description="Converted">
+</Event></UpgradeLog>
