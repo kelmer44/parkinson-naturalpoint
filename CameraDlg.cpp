@@ -26,7 +26,7 @@ de las dos manos de forma simultánea
 #include <time.h>
 #include <winsock2.h>
 #include <WS2TCPIP.h>
-
+#include <windows.h>
 #include "J_Enviar.h"
 #include "J_Recibir.h"
 
@@ -1182,11 +1182,12 @@ void CCameraDlg::UpdateVectorInfo(INPCameraFrame * pFrame)
 				remix[1]  = 2; //xz_punta01.y; // ang cabeza
 				remix[2]  = 3; // ang cabeza
 				remix[23] = frameCount4++;
-				timeval t;
-				gettimeofday(&t, NULL);
 				VARIANT* pVal = new VARIANT;
 				pFrame->get_TimeStamp(pVal);
-				remix[24] = t*1000;
+				SYSTEMTIME SystemTime;
+				GetSystemTime(&SystemTime);
+				
+				remix[24] = SystemTime.wMilliseconds;
 				// recibo de la cámara 2 [MANO DERECHA]
 				if(recibe1){
 					remix[3]  = buffer2[0];
