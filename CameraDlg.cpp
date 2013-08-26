@@ -23,7 +23,7 @@ de las dos manos de forma simultánea
 #include <math.h>
 #include <iostream>
 #include <fstream>
-
+#include <time.h>
 #include <winsock2.h>
 #include <WS2TCPIP.h>
 
@@ -44,14 +44,15 @@ de las dos manos de forma simultánea
 #define _msg_enviando   "<+> Enviando bytes "
 #define _msg_datagrama  "<!> No se puede enviar el datagrama "
 
-#define CAM_01 85760
-//#define CAM_01 67724  // CAMBIO EL ORDEN OTRA PUTA VEZ
+
+#define CAM_01 67724  // CAMBIO EL ORDEN OTRA PUTA VEZ
 #define CAM_02 79156 
 //#define CAM_02 98432 //79156 ///98432   //  // 79154  // 67724 - la 677 era la antigua cámara para la mano derecha, pero como se jodió ahí queda
 #define CAM_03  89897 
 
 //#define CAM_03 100088 //#define CAM_03 98433  // 79154 - la 79154 ahora va para la mano derecha, la 677 no funciona
-#define CAM_04 79154 
+//#define CAM_04 79154 
+#define CAM_04 85760
 //#define CAM_04 98431 // //98431 //79154 //98431 //79154 //98431  // 79156  //98431 // cámara vista cenital  - NÚMERO ORIGINAL MÉDICOS EN CORUÑA - 98431
 
 bool  first_time_cam02=true;
@@ -88,7 +89,9 @@ int    ttl=2;
 int    msg_actual = 0;
 int    puerto=0; //2020;
 //int    teclas[3];
-
+int frameCount4 = 0;
+int frameCount2 = 0;
+int frameCount3 = 0;
 /*
 void n_err_msg(char *box_name, char *fmt,...){ 
 
@@ -619,7 +622,7 @@ void CCameraDlg::FillCameraInfo()
 	//serial3 += TEXT("100088"); //serial3 += TEXT("89897");//serial3 += TEXT("98433"); //("79156");
 	serial3 += TEXT("89897"); //("79156");
 	//serial4 += TEXT("98431"); //"79156"); //"98431");  - ESTA ES LA DE VERDAD EN EL EQUIPO DE LOS MÉDICOS
-	serial4 += TEXT("79154"); //"79156"); //"98431");  - ESTA ES LA DE VERDAD EN EL EQUIPO DE LOS MÉDICOS
+	serial4 += TEXT("85760"); //"79156"); //"98431");  - ESTA ES LA DE VERDAD EN EL EQUIPO DE LOS MÉDICOS
 	if(m_strSerialNumber.Compare(serial1) == 0)      cam_id = CAM_01;
 	else if(m_strSerialNumber.Compare(serial2) == 0) cam_id = CAM_02;
 	else if(m_strSerialNumber.Compare(serial3) == 0) cam_id = CAM_03;
@@ -922,14 +925,16 @@ void CCameraDlg::UpdateVectorInfo(INPCameraFrame * pFrame)
 
 
 			//////////////////////////////////////////////////////////////
-			float buffer1[5];
+			float buffer1[6];
 
 			buffer1[0] = p_mano01.x; //enviamos la coord z segun esta camara
 			buffer1[1] = p_mano01.y; //enviamos la coord z segun esta camara
 			buffer1[2] = p_muneca01.y;
 			buffer1[3] = p_dedo01.y;
-
-
+			buffer1[4] = frameCount2++;
+				VARIANT* pVal = new VARIANT;
+				pFrame->get_TimeStamp(pVal);
+				buffer1[5] = pVal->dblVal;
 
 			j_sender[1]->setBuffer((void *)buffer1,sizeof(buffer1));
 			j_sender[1]->sync();
@@ -1006,7 +1011,10 @@ void CCameraDlg::UpdateVectorInfo(INPCameraFrame * pFrame)
 			buffer2[1] = p_mano01.y;
 			buffer2[2] = p_muneca01.y;
 			buffer2[3] = p_dedo01.y;
-
+			buffer2[4] = frameCount3++;
+				VARIANT* pVal = new VARIANT;
+				pFrame->get_TimeStamp(pVal);
+				buffer2[5] = pVal->dblVal;
 
 			j_sender[2]->setBuffer((void *)buffer2,sizeof(buffer2));
 			j_sender[2]->sync();
@@ -1027,7 +1035,7 @@ void CCameraDlg::UpdateVectorInfo(INPCameraFrame * pFrame)
 		tVector3 xz_muneca01 = NULL_VEC3, xz_muneca02 = NULL_VEC3; // la jodida muneca para corregir el giro de los dedos
 		CComVariant varX, varY, varArea;
 
-		if(lCount >= 3){
+		if( lCount >= 3){
 			// SI HAY MÁS OBJETOS DE LOS QUE DEBERÍA, EN ESTE CASO - ME LA PELA
 			for(int i = 0; i < lCount; i++){         // por ahora sólo tenemos dos cosas para trackear
 
@@ -1170,16 +1178,23 @@ void CCameraDlg::UpdateVectorInfo(INPCameraFrame * pFrame)
 					recibe2 = false;
 
 				// recibo de la cámara 1 [CABEZA]
-				remix[0]  = xz_punta01.x; // ang cabeza
-				remix[1]  = xz_punta01.y; // ang cabeza
+				remix[0]  = 1; //xz_punta01.x; // ang cabeza
+				remix[1]  = 2; //xz_punta01.y; // ang cabeza
 				remix[2]  = 3; // ang cabeza
-
+				remix[23] = frameCount4++;
+				timeval t;
+				gettimeofday(&t, NULL);
+				VARIANT* pVal = new VARIANT;
+				pFrame->get_TimeStamp(pVal);
+				remix[24] = t*1000;
 				// recibo de la cámara 2 [MANO DERECHA]
 				if(recibe1){
 					remix[3]  = buffer2[0];
 					remix[4]  = buffer2[1];
 					remix[5]  = buffer2[2];
 					remix[6]  = buffer2[3];
+					remix[25] = buffer2[4]; //frameId
+					remix[26] = buffer2[5]; //frametime
 					}
 
 				// recibo de la cámara 3 [MANO DERECHA]
@@ -1188,6 +1203,9 @@ void CCameraDlg::UpdateVectorInfo(INPCameraFrame * pFrame)
 					remix[8]  = buffer3[1]; // ang dedo
 					remix[9]  = buffer3[2]; // ang dedo
 					remix[10] = buffer3[3]; // pos y mano izquierda
+					
+					remix[27] = buffer3[4]; //frameId
+					remix[28] = buffer3[5]; //frametime
 					}
 
 
